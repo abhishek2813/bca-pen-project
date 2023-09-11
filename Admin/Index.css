@@ -1,0 +1,468 @@
+*{
+    margin: 0%;
+    padding: 0%;
+    box-sizing: border-box;
+    list-style: none;
+    text-decoration: none;
+}
+
+
+
+body{
+    background-color:#eeeff4;
+    font-family: -apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,"Helvetica Neue",Arial,sans-serif,"Apple Color Emoji","Segoe UI Emoji","Segoe UI Symbol","Noto Color Emoji";
+}
+
+
+
+.wrapper{
+    display: flex;
+    position: relative;
+}
+
+
+
+
+/*       Sidebar ki styling            */
+
+
+
+
+.wrapper .sidebar{
+    position: fixed;
+    width: 200px;
+    height: 100%;
+    background: #607d8b;
+}
+
+
+
+.wrapper .sidebar h2{
+    color:#fff;
+    text-transform: uppercase;
+    text-align: center;
+    margin-bottom: 30px;
+    padding-top: 20px;
+}
+
+
+
+.wrapper .sidebar ul li{
+    text-align: center;
+}
+
+
+
+.wrapper .sidebar ul li a{
+    color: #f5f3ff;
+    display: block;
+    font-size: 3Spx;
+    padding: 15px;   
+
+}
+
+
+
+.wrapper .sidebar ul li:hover{
+    background: #516a76;
+    font-weight:bolder ;
+}
+
+
+
+.wrapper .sidebar ul li a:hover{
+    color: #fff;
+}
+
+
+
+
+/*          Main content            */
+
+
+
+
+.wrapper .main-content{
+    width: 100%;
+    margin-left: 200px;    
+}
+
+
+
+.wrapper .main-content .header{
+    padding: 10px;
+    padding-bottom:5px ;
+    background:#607d8b;
+    color:#717171;
+    border-bottom: 1px solid #e0e4e8;
+    display: flex;
+    position: sticky;
+    top: 0px;
+    z-index: 999;
+}
+
+
+
+.logo img{
+    width: 100px;
+}
+
+
+
+.wrapper .main-content .header .left-header{
+    margin-left: 10px;
+}
+
+
+
+
+.wrapper .main-content .header .right-header{
+    width: 100%;
+    text-align: right;
+}
+
+
+
+.wrapper .main-content .header .right-header span{
+    margin: 20px;
+    border-radius: 2px;
+}
+
+
+.wrapper .main-content .header .right-header span a{
+    color: #f5f3ff;
+    padding: 15px;
+    font-size: 1.2rem;
+ 
+}
+
+.wrapper .main-content .header .right-header a:hover{
+        color:#b9dbff;
+}
+
+
+
+
+/*              Form                 */
+
+.container{
+    background-color: whitesmoke;
+    border: 1px solid gray;
+    border-radius: 10px;
+    position: relative;
+    padding: 5px 10px 30px 10px;
+}
+
+.container h1{
+    padding: 20px;
+}
+
+form p{
+    padding: 10px; 
+    font-size: 18px;
+}
+
+select,textarea,input[type="text"],input[type="email"],input[type="password"],input[type="checkbox"],input[type="number"],input[type="date"]
+{
+    width:100%;
+    padding: 8px;
+}
+
+fieldset{
+    background-color: white;
+    width: 99%;
+}
+
+input[type="submit"]{
+    background-color: #18dd60;;
+    width: 100%;
+    padding: 9px;
+    font-size:18px ;
+    color: white;
+    border: 1px solid grey;
+}
+
+input[type="submit"]:hover{
+    cursor: pointer;
+    background-color:#0bfa63;
+    border: 1px solid grey;
+}
+
+
+
+
+
+
+/*            Main content ka info            */
+
+
+
+.wrapper .main-content .info{
+    margin: 20px;
+    box-sizing: border-box;
+    
+}
+
+
+.info-header{
+    width: 100%; 
+    padding:20px;
+    position: sticky;
+    top: 80px;
+    margin-bottom: 20px ;
+    z-index: 998;
+    border-radius: 6px;
+}
+
+
+.info-header h3{
+    margin-left: 1em;
+    color:rgb(255, 255, 255);
+    font-weight: 500;
+}
+
+
+
+/*--------------Info ki table------------------------*/
+
+
+
+.table-wrapper{
+    overflow-y:auto;
+    height: 70vh;
+    border-top-left-radius: 10px; 
+    border-top-right-radius: 10px; 
+    box-sizing: border-box;
+}
+
+.table-data{
+   width: 100%; 
+   text-align: center;
+   border-collapse: collapse;
+   background: #ffffff;
+   border-radius: 10px;
+   border: 1px solid rgb(255, 255, 255);
+}
+
+.table-data th{
+    padding: 10px;
+    position: sticky;
+    top: 0px;
+    background-color: #d8d8d8;
+    
+}
+
+.table-data td{
+   border-bottom: 1px solid #dadada;
+   vertical-align: middle;
+
+   color: #212529;
+    box-sizing: border-box;
+    
+}
+
+
+
+/*   Edit in brand table  */
+
+
+
+.brand-active a{ 
+    padding: 0.2em 2.45em;
+    color:#fff;
+    border-radius: 15px;
+    background-color:rgb(81, 218, 22);
+    margin: 1em;
+}
+
+
+.brand-deactive a{ 
+    padding: 0.2em 2.45em;
+    color:#fff;
+    border-radius: 15px;
+    background-color:darkorange;
+}
+
+.brand-delete a{ 
+    padding: 0.2em 1.5em;
+    color:#fff;
+    border-radius: 15px;
+    background-color:red;
+    
+}
+
+.brand-edit a{ 
+    padding: 0.2em 1.5em;
+    color:#fff;
+    border-radius: 15px;
+    background-color:rgb(15, 156, 226);
+    
+}
+
+
+/* info header button  */
+
+.info-header-button{
+    margin-left: auto;
+}
+
+.info-header-button a{
+    padding: 0.4em 2em;
+    color:#fff;
+    border-radius: 5px;
+    background-color:rgb(20 20 21);
+    margin-right: 2em;
+}
+
+
+
+
+/*----------Feedback section------------*/
+
+
+
+
+.table-wrapper{
+    overflow-y:auto;
+    height: 70vh;
+    border-top-left-radius: 10px; 
+    border-top-right-radius: 10px; 
+    box-sizing: border-box;
+
+}
+
+.table-data{
+   width: 100%; 
+   text-align: center;
+   border-collapse: collapse;
+   background: #ffffff;
+   border-radius: 10px;
+   border: 1px solid rgb(255, 255, 255);
+   overflow-x: auto;
+}
+
+.table-data th{
+    padding: 10px;
+    position: sticky;
+    top: 0px;
+    background-color: #d8d8d8;
+    
+}
+
+.table-data td{
+   border-bottom: 1px solid #dadada;
+   vertical-align: middle;
+   line-height: 4;
+   color: #212529;
+    box-sizing: border-box;
+    
+}
+
+
+
+/*   Edit in brand table  */
+
+
+
+.brand-active a{ 
+    padding: 0.2em 2.45em;
+    color:#fff;
+    border-radius: 15px;
+    background-color:rgb(81, 218, 22);
+    margin: 1em;
+}
+
+
+.brand-deactive a{ 
+    padding: 0.2em 2.45em;
+    color:#fff;
+    border-radius: 15px;
+    background-color:darkorange;
+}
+
+.brand-delete a{ 
+    padding: 0.2em 1.5em;
+    color:#fff;
+    border-radius: 15px;
+    background-color:red;
+    
+}
+
+.brand-edit a{ 
+    padding: 0.2em 1.5em;
+    color:#fff;
+    border-radius: 15px;
+    background-color:rgb(15, 156, 226);
+    
+}
+
+
+/* info header button  */
+
+.info-header-button{
+    margin-left: auto;
+}
+
+.info-header-button a{
+    padding: 0.4em 2em;
+    color:#fff;
+    border-radius: 5px;
+    background-color:#8d422b;
+    margin-right: 2em;
+}
+
+
+
+/*---------Feedback section-------*/
+
+#f-data tr td{
+    line-height: 2;
+    padding: 2em;
+   
+}
+
+.feedback-delete a{ 
+    padding: 0.2em 1.5em;
+    color:#fff;
+    border-radius: 15px;
+    background-color:red;
+}
+
+
+
+/*----------Earning section---*/
+
+.earn-container{
+    background-color: whitesmoke;
+    border: 0px solid gray;
+    border-radius: 10px;
+    position: relative;
+    padding: 10px;
+    width: 300px; height: 200px; 
+    margin:1em;
+    text-align: center;
+    display: flex;
+    align-items: center;
+   
+}
+
+.earn-inner{
+    width: 100%;
+    color: white;
+}
+
+
+.earn-inner h1{
+    font-weight: 500;
+    padding-bottom: 10px;
+   font-size: 35px;
+} 
+
+.earn-inner p{
+    font-weight: 400;
+    padding-bottom: 10px;
+    font-size: 25px;
+    
+} 
+
+
