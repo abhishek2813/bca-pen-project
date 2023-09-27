@@ -9,15 +9,13 @@ if(isset($_POST['send']))
     $message=$_POST['message'];
 
     $sql="INSERT INTO `feedback` (`email`, `subject`, `query`, `time`) VALUES ('$email', '$subject', '$message', current_timestamp())";
-
     $result=mysqli_query($conn,$sql);
     if($result)
     {
-        header('Location: contact.php?Your_feedback_is_succesfully_sent');
-        exit;
+        $errorText = "Your feedback is succesfully sent";
     }
     else{
-        header("location: contact.php?Error_in_query");
+        $errorText = "Error Try Again";
     }
 }
 
@@ -44,7 +42,11 @@ if(isset($_POST['send']))
     <div style="margin-top: 3em;">
         <h1 style=" margin-left: 1.5em; font-size: 3em;">Send us Feedback</h1>
     </div>
-
+    <?php if (!empty($errorText)): ?>
+            <div class="error-message">
+                <?php echo $errorText; ?>
+            </div>
+        <?php endif; ?>
         <div class="form-container"> 
             <form method="post" action="#">
 

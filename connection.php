@@ -1,23 +1,12 @@
 <?php
   session_start();
-  if(!isset($_SESSION['loggedin']) || $_SESSION['loggedin']!=true|| isset($_SESSION['admin_logged_in'])){
+
+    $dbHost="localhost";
+    $dbUser="root";
+    $dbPass="";
+    $database="ecom";
     
-      session_unset();
-      session_destroy();  
-      header("Location: login.php?Login_by_proper_ways");
-      exit;
-    }
-    else{ 
-         
-      $dbHost="localhost";
-      $dbUser="root";
-      $dbPass="";
-      $database="ecom";
-      
-      $conn= mysqli_connect($dbHost, $dbUser, $dbPass,$database);
-    }
-    
-    
+    $conn= mysqli_connect($dbHost, $dbUser, $dbPass,$database);
     #-------New arrivals waale
   
     function get_product_limit($conn ,$limit='')

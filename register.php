@@ -2,20 +2,13 @@
 <html>
 <head>
     <title>Form</title>
-
+    <link rel="stylesheet" href="Main.css">
     <style>
-        *{
-            box-sizing: border-box;
-        }
-        body{
-            font-family: Verdana, Geneva, Tahoma, sans-serif;
-            background-color: #f2f2f2;
-            color:#414d53;
-        }
+       
 
         .container{
             border-radius: 5px;
-            position: relative;
+            position: static;
             padding: 0vh 30vh;
         }
 
@@ -56,18 +49,36 @@
             text-align:center;
             color:black;
         }
-
+        a{
+            color: blue;
+        }
+        .error-message {
+            color: red;
+        }
     </style>
 </head>
 <body>
+<?php
+    include("header.php");
+    if (isset($_GET['error'])) {
+        $errorText = $_GET['error'];
+    } else {
+        $errorText = ""; // No error initially
+    }
+    ?>
     <div class="container"> 
         <h1 style="text-align: center; font-family:sans-serif;">Create New Account </h1>
- 
+ <!-- Display the error message here -->
+ <?php if (!empty($errorText)): ?>
+            <div class="error-message">
+                <?php echo $errorText; ?>
+            </div>
+        <?php endif; ?>
     <form action="database.php" method="post">
 
         <p>Enter username <input type="text" name="uname" required></p>
-        <p>Enter Password <input type="text" name="upass"></p>
-        <p>Confirm Password <input type="text" name="ucpass"></p>
+        <p>Enter Password <input type="password" name="upass"></p>
+        <p>Confirm Password <input type="password" name="ucpass"></p>
         <p>Email <input type="email" name="email" placeholder="abc@email.com" required></p>
         <p>Phone no<input type="number" name="phone_no" placeholder="9876543210" required></p>
         <fieldset>        

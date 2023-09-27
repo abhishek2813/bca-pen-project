@@ -36,7 +36,7 @@ if($conn)
                     exit;
                 }
                 else{
-                    header("Location: login.php?Admin_row_not_affect");
+                    header("Location: login.php?error=Admin row not affect");
                 }
 
             }
@@ -64,11 +64,12 @@ if($conn)
                 exit;
             }
             else{
-                header("Location: login.php?Password_did_not_match");
+                echo "";
+                header("Location: login.php?error=Password did not match");
             }
         }
         else{
-            header("Location: login.php?There_is_no_user_with_this_name");
+            header("Location: login.php?error=There is no user with this name");
         }
     }
 
@@ -99,7 +100,7 @@ if($conn)
 
         if($numExistUser>0)
         {
-            header("Location: register.php?Email_already_exist");
+            header("Location: register.php?error=Email_already_exist");
             exit;
         }
         else
@@ -143,27 +144,27 @@ if($conn)
                                 exit;
                             }
                             else{
-                                header("location: register.php?Order_table_query_error");   
+                                header("location: register.php?error=Order table query error");   
                             }
                         
                     
                         
                         }else{
-                            header("location:register.php?Something_wrong with cart creation");
+                            header("location:register.php?error=Something wrong with cart creation");
                             exit;
                         }
 
                      }else{
-                         header("location: register.php?Num_user_query_error");
+                         header("location: register.php?error=Num user query error");
                      }
                 }
                 else{
-                    header("Location: register.php?Rows_not_affected=$numExistUser");
+                    header("Location: register.php?error=Rows not affected=$numExistUser");
                 }
 
             }else
             {
-                header("Location: register.php?Password_did_not_match");
+                header("Location: register.php?error=Password did not match");
             }
 
 
